@@ -1,6 +1,8 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
+const { ActivityType } = require('discord.js');
+
 
 const client = new Discord.Client({ intents: ['Guilds', 'GuildMessages', 'MessageContent'] });
 
@@ -15,6 +17,17 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
   console.log('Bot prêt !');
+  const guildCount = client.guilds.cache.size;
+
+    client.user.setActivity(
+        "+help for list commands | ${guildCount} serveurs",
+        { type: ActivityType.Watching }
+    );
+    
+    
+ 
+  
+
 });
 
 client.on('messageCreate', message => {

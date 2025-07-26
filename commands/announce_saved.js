@@ -4,7 +4,7 @@ const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
   name: 'announce_saved',
-  description: 'Envoie une annonce enregistrée dans un salon mentionné.',
+  description: 'Envoie une annonce enregistrée dans un salon mentionné.  Usage : +announce_saved <nom> #salon',
   execute(message, args) {
     if (args.length < 2) {
       return message.reply('Usage : +announce_saved <nom> #salon');

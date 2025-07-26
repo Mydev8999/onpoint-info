@@ -1,9 +1,11 @@
 const {EmbedBuilder} = require('discord.js');
-
+const config = require('../config.json');
 module.exports = {
     name: 'test',
     description: 'Renvoie le ping du bot. Usage : +test',
     execute(message) {
+
+    if (message.author.id !== config.dev_id ){
       const ping = Date.now() - message.createdTimestamp;
         const embed = new EmbedBuilder()
         .setTitle('Ping')
@@ -14,6 +16,7 @@ module.exports = {
      
         message.channel.send({ embeds: [embed] });
     }
+}
   
 };
   
