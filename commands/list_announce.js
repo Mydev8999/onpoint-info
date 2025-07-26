@@ -4,7 +4,7 @@ const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
   name: 'list_announce',
-  description: 'Liste toutes les annonces enregistrées pour ce serveur.',
+  description: 'Liste toutes les annonces enregistrées pour ce serveur. Usage : +list_announce',
   execute(message) {
     const filePath = path.resolve(__dirname, '../annonces.json');
 

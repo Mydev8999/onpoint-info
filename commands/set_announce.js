@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   name: 'set_announce',
-  description: 'Enregistre une annonce avec un nom spécifique pour ce serveur.',
+  description: 'Enregistre une annonce avec un nom spécifique pour ce serveur. Usage : +set_announce <nom> <texte de l\'annonce>',
   execute(message, args) {
     if (args.length < 2) {
       return message.reply('Usage : +set_announce <nom> <texte de l\'annonce>');

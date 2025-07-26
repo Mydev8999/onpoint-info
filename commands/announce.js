@@ -2,7 +2,7 @@ const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
   name: 'announce',
-  description: 'Envoie une annonce dans un salon mentionné.',
+  description: 'Envoie une annonce dans un salon mentionné.  Usage : +announce <#salon> <message>',
   async execute(message, args) {
     // Vérifie si l'utilisateur a la permission de gérer les messages
     if (!message.member.permissions.has('ManageMessages')) {

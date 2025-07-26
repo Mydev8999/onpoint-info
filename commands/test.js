@@ -2,7 +2,7 @@ const {EmbedBuilder} = require('discord.js');
 
 module.exports = {
     name: 'test',
-    description: 'Renvoie le ping du bot.',
+    description: 'Renvoie le ping du bot. Usage : +test',
     execute(message) {
       const ping = Date.now() - message.createdTimestamp;
         const embed = new EmbedBuilder()

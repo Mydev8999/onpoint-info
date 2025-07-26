@@ -1,7 +1,7 @@
 const {dev_id} = require('../config.json');
 module.exports = {
     name: 'reload',
-    description: 'Recharge une commande.',
+    description: 'Recharge une commande.    Usage : +reload <nom_de_la_commande>',
     async execute(message, args, client) {
       // Vérifie que l'utilisateur est autorisé (ici : l'owner)
       const ownerId = dev_id; // remplace par ton ID Discord
